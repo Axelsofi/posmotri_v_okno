@@ -1,21 +1,21 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html {
-  block-size: 100%;
+    block-size: 100%;
 }
 
 .page {
-  inline-size: 1200px;
-  block-size: 100%;
-  margin: auto;
-  color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
-  font-size: 18px;
-  background-color: #1b1919;
+    inline-size: 1200px;
+    block-size: 100%;
+    margin: auto;
+    color: #fff;
+    font-family: "Fira Sans Condensed", sans-serif;
+    font-size: 18px;
+    background-color: #1b1919;
 }
 
 h1,
@@ -28,11 +28,299 @@ ol,
 li,
 blockquote,
 fieldset {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 ul,
 ol {
-  list-style: none;
+    list-style: none;
+}
+
+.visually-hidden {
+    position: absolute;
+    inline-size: 1px;
+    block-size: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    min-inline-size: 1140px;
+    gap: 30px;
+    margin-block-start: 133px;
+    margin-block-end: 133px;
+}
+
+.result {
+    inline-size: 711px;
+    min-block-size: 456px;
+    margin-inline-start: 30px;
+    margin-block-start: 78px;
+}
+
+.result__video-container {
+    position: relative;
+}
+
+.result__video {
+    block-size: 100%;
+    inline-size: 100%;
+}
+
+.title {
+    font-family: "Oswald";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 75px;
+    line-height: 94%;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.content__accent {
+    font-family: "Oswald";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 75px;
+    line-height: 94%;
+    text-transform: uppercase;
+    color: #545050;
+}
+
+.content__card-link {
+    text-decoration: none;
+    color: #ffffff;
+    display: block;
+}
+
+.content__video-card-title {
+    margin-block-end: 6px;
+    font-family: "Oswald";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.content__video-card-description {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 16px;
+    color: #ffffff;
+    order: 1;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding-block-start: 16px;
+}
+
+.search-form__fieldset-title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #ffffff;
+}
+
+.content__list {
+    block-size: 298px;
+    overflow-y: scroll;
+    margin-block-start: 26px;
+    overflow: auto;
+    position: relative;
+}
+
+.content__details {
+    display: flex;
+    flex-direction: column;
+    inline-size: 100%;
+    block-size: 100%;
+    margin-inline-end: 30px;
+}
+
+.content__list-item:not(:last-child) {
+    padding-block-end: 30px;
+}
+
+.content__card-link_current {
+    background-color: rgba(84, 80, 80, 1);
+}
+
+.content__video-card:hover {
+    text-decoration: underline;
+}
+
+.content__card-link:focus {
+    outline: 1px solid #ffffff;
+}
+
+.content__video-card {
+    display: flex;
+    align-items: flex-start;
+}
+
+.content__video-card-thumbnail {
+    width: 194px;
+    height: 103px;
+}
+
+.content__video-card-description-container {
+    flex: 1;
+}
+
+fieldset {
+    border: 0;
+}
+
+.search-form__fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    inline-size: 100%;
+}
+
+.search-form__checkbox-list {
+    cursor: pointer;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.search-form__label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: fit-content;
+    text-decoration: underline transparent;
+    cursor: pointer;
+    appearance: none;
+}
+
+.search-form__textfield {
+    padding: 2px 0;
+    border-right: none;
+    border-left: none;
+    inline-size: 225px;
+    background-color: transparent;
+    font-family: "Fira Sans Condensed";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.7);
+}
+.search-form__textfield:active {
+    border: 1px solid #ffffff;
+}
+
+.search-form__textfield:focus {
+    outline: 1px solid #ffffff;
+}
+
+.search-form__label {
+    display: flex;
+    gap: 5px;
+    width: fit-content;
+    cursor: pointer;
+    appearance: none;
+}
+
+.search-form__label:hover {
+    text-decoration: underline;
+}
+
+.search-form__label:has(:focus-visible) {
+    outline: 1px solid #ffffff;
+}
+
+.search-form__pseudo-checkbox {
+    width: 15px;
+    height: 15px;
+    border: 1px solid #ffffff;
+}
+
+input[type="checkbox"]:checked + .search-form__pseudo-checkbox {
+    background-color: #ffffff;
+    height: 15px;
+    width: 15px;
+    outline: 1px solid #ffffff;
+    outline-offset: 1px;
+}
+
+.button {
+    cursor: pointer;
+    border: 1px solid #ffffff;
+    background-color: transparent;
+    inline-size: 100%;
+}
+
+.search-form__submit-button {
+    font-family: "Fira Sans Condensed";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    display: flex;
+    align-self: flex-end;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    display: flex;
+    padding: 6px 73.5px;
+    gap: 10px;
+    inline-size: 194px;
+    appearance: none;
+}
+
+.search-form__submit-button:has(:focus-visible) {
+    outline: 1px double #ffffff;
+}
+
+.search-form__submit-button:active {
+    background-color: rgba(84, 80, 80, 1);
+}
+
+.search-form__submit-button:hover {
+    text-decoration: underline;
+}
+
+.more-button {
+    width: 100%;
+    padding-block: 6px;
+    font-family: "Fira Sans Condensed";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21.6px;
+    text-align: center;
+    color: #ffffff;
+    appearance: none;
+}
+
+.content__card-link {
+    margin: 2px;
+}
+
+.more-button:hover {
+    text-decoration: underline;
+}
+
+.more-button:active {
+    background-color: rgba(84, 80, 80, 1);
+}
+
+.more-button:focus-visible {
+    border: 1px double #ffffff;
 }
