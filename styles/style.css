@@ -53,10 +53,7 @@ ol {
   display: flex;
   min-inline-size: 1140px;
   gap: 30px;
-  padding-inline-start: 30px;
-  padding-inline-end: 30px;
-  padding-block-start: 133px;
-  padding-block-end: 133px;
+  margin: 0 30px;
 }
 
 .result {
@@ -169,7 +166,6 @@ ol {
 
 .content__list {
   block-size: 298px;
-  scrollbar-width: none;
   position: relative;
   overflow: auto;
 }
@@ -230,9 +226,6 @@ fieldset {
   border-left: none;
   padding: 2.5px 0;
   color: currentColor;
-  font-family: inherit;
-  font-weight: inherit;
-  font-size: inherit;
   background-color: transparent;
   inline-size: 225px;
 }
@@ -293,7 +286,7 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox {
   line-height: normal;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
+  color: #fff;
   border: 1px solid #ffffff;
   background-color: transparent;
   font-family: "Fira Sans Condensed", sans-serif;
